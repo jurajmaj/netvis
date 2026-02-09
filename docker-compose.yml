@@ -1,0 +1,8 @@
+version: "3.8"
+
+services:
+
+  myApp:
+    image: "git.kpi.fei.tuke.sk:4567/rastislav.petija/cnl_docker_image_registry/netvis:release2"
+    ports:
+      - "80:80"

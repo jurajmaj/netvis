@@ -1,0 +1,21 @@
+<svg width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<!-- Styled to match Router.svg: black body + white outline/details -->
+	<g fill-rule="evenodd" clip-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+		<!-- Antennas -->
+		<path d="M47.649 26.382V.788" stroke="black" stroke-width="0.788" stroke-linecap="square" stroke-linejoin="miter" />
+		<path d="M47.649 25.988V8.269" stroke="black" stroke-width="3.15" stroke-linecap="square" stroke-linejoin="miter" />
+		<path d="M48.436 3.15h-1.575V0h1.575v3.15z" fill="black" />
+
+		<path d="M9.455 26.382V.788" stroke="black" stroke-width="0.788" stroke-linecap="square" stroke-linejoin="miter" />
+		<path d="M9.455 25.988V8.269" stroke="black" stroke-width="3.15" stroke-linecap="square" stroke-linejoin="miter" />
+		<path d="M10.242 3.15H8.667V0h1.575v3.15z" fill="black" />
+
+		<path d="M57.881 29.932c0 5.906-12.994 11.025-29.138 11.025C12.994 40.957 0 35.838 0 29.932v16.144c0 6.3 12.994 11.419 28.744 11.419 16.144 0 29.138-5.119 29.138-11.419z" fill="black" />
+		<path d="M57.881 29.932c0 5.906-12.994 11.025-29.138 11.025C12.994 40.957 0 35.838 0 29.932v16.144c0 6.3 12.994 11.419 28.744 11.419 16.144 0 29.138-5.119 29.138-11.419z" fill="none" stroke="white" stroke-width="0.788" />
+
+		<path d="M28.744 40.957c16.144 0 29.138-5.119 29.138-11.025 0-6.3-12.994-11.419-29.138-11.419C12.994 18.513 0 23.632 0 29.932c0 5.906 12.994 11.025 28.744 11.025z" fill="black" />
+		<path d="M28.744 40.957c16.144 0 29.138-5.119 29.138-11.025 0-6.3-12.994-11.419-29.138-11.419C12.994 18.513 0 23.632 0 29.932c0 5.906 12.994 11.025 28.744 11.025z" fill="none" stroke="white" stroke-width="0.788" />
+
+		<path d="M22.448 25.2l2.363 3.938-9.056 1.969 1.969-1.575-14.175-2.362 3.544-2.756 13.388 2.363 1.969-1.575zm12.6 9.056l-1.575-3.937 7.875-1.575-1.181 1.181 13.388 2.363-3.15 2.756-13.388-2.756-1.969 1.969zm-4.331-11.025l9.056-2.363v3.938l-2.362-.394-4.331 3.544-4.331-.394 4.725-3.544-2.756-.788zM26.78 37.407l-9.056 1.575v-3.938l2.363.394 4.725-3.938 4.331.788-5.119 4.331 2.756.788z" fill="white" />
+	</g>
+</svg>

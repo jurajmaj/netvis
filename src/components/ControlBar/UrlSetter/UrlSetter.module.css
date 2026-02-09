@@ -1,0 +1,22 @@
+.urlSetter{
+    width: 255px;
+    background-color: white;
+}
+
+@media (max-width: 400px) {
+    .urlSetter {
+        width: 150px;
+    }
+}
+
+@media (max-width: 290px) {
+    .urlSetter {
+        width: 100px;
+    }
+}
+
+@media (max-width: 230px) {
+    .urlSetter {
+        width: 60px;
+    }
+}

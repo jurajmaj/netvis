@@ -1,0 +1,17 @@
+.selectBox {
+    border-radius: 4px;
+    pointer-events: all;
+}
+
+.menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    pointer-events: all;
+    z-index: 100 !important;
+}
+
+.inputBox {
+    width: 100px;
+    pointer-events: all;
+}

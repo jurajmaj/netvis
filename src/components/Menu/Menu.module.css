@@ -1,0 +1,21 @@
+.panel {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background: #eaeaea;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.panel:hover {
+    background: #e1e1e1;
+    border: 1px solid #dcdcdcb6;
+    transform: scale(1.02);
+}
+
+@media (max-width: 585px) {
+    .panel {
+        top: 65px !important;
+    }
+}

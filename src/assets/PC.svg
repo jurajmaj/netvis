@@ -1,0 +1,8 @@
+<svg width="60" height="55" viewBox="-5 -5 60 60" fill="none" stroke="black" xmlns="http://www.w3.org/2000/svg">
+    <line class="deviceIcon" x1="1" y1="32" x2="53.9245" y2="32" stroke-width="2"/>
+    <line class="deviceIcon" x1="23.7947" y1="37.169" x2="22.0846" y2="41.8675" stroke-width="2"/>
+    <line class="deviceIcon" y1="-1" x2="5" y2="-1" transform="matrix(0.34202 0.939693 0.939693 -0.34202 33 37)" stroke-width="2"/>
+    <rect class="deviceIcon" x="1" y="1" width="53" height="35.8409" rx="4" stroke-width="2"/>
+    <rect class="deviceIcon" x="26.4" y="33.9" width="3" height="1" rx="0.5"/>
+    <path class="deviceIcon" d="M19 42H37C37.5523 42 38 42.4477 38 43V45C38 45.5522 37.5523 46 37 46H19C18.4477 46 18 45.5522 18 45V43C18 42.4477 18.4477 42 19 42Z" stroke-width="2"/>
+</svg>

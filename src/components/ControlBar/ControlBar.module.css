@@ -1,0 +1,92 @@
+/* Main container of ControlBar component */
+.panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.controllers {
+    min-width: 480px;
+    max-height: 700px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    /*background: #e1e1e1;*/
+    background: rgba(232, 232, 232, 0.89);
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.panel label {
+    font-family: monospace;
+    font-size: 11px;
+    text-align: center;
+    user-select: none;
+}
+
+.panel select {
+    width: 80px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.addButton {
+    background-color: rgb(39, 39, 39);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    transition-duration: 0.4s;
+    min-width: 250px;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+.addButtonDark {
+    background-color: rgb(39, 39, 39);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    transition-duration: 0.4s;
+    min-width: 250px;
+    user-select: none;
+    border-color: #ffffff;
+    box-sizing: border-box;
+}
+
+.addButton:hover {
+    background-color: rgb(82, 82, 82);
+    color: rgb(255, 255, 255);
+}
+
+@media (max-width: 635px) {
+    .panel label {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 585px) {
+    .panel {
+        width: 100%;
+        max-width: 90%;
+    }
+
+    /* Override desktop minimums so the UI can shrink on narrow screens */
+    .controllers {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .addButton , .addButtonDark {
+        width: 100%;
+        max-width: 30%;
+        min-width: 0;
+    }
+}

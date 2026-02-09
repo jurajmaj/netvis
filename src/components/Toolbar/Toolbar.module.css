@@ -1,0 +1,85 @@
+.panel {
+    left: 37%;
+    padding: 13px 13px 13px;
+    background: #eaeaea;
+    border: 1px solid #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+
+.routerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 15px;
+    margin-right: 25px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.serverContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.PCContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 12px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.wirelessRouterContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 12px;
+    margin-top: 0px;
+    cursor: pointer;
+}
+
+.routerContainer:hover,
+.serverContainer:hover,
+.PCContainer:hover,
+.wirelessRouterContainer:hover {
+    transform: scale(1.06);
+}
+
+@media (max-width: 1400px) {
+    .panel {
+        top: 65px;
+        left: 0;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .routerContainer {
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+
+    .serverContainer {
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+
+    .PCContainer {
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+}
+
+@media (max-width: 585px) {
+    .panel {
+        top: 115px;
+    }
+}

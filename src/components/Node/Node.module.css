@@ -1,0 +1,59 @@
+.label {
+    font-size: 15px;
+    height: 14px;
+    line-height: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.routerHandle {
+    height: 15px;
+    width: 15px;
+    top: -22%;
+    left: 50%;
+    background-color: rgb(38, 38, 38);
+}
+
+.serverHandle {
+    height: 15px;
+    width: 15px;
+    top: -10%;
+    left: 50%;
+    background-color: rgb(38, 38, 38);
+}
+
+.pcHandle {
+    height: 15px;
+    width: 15px;
+    top: -7%;
+    left: 53%;
+    background-color: rgb(38, 38, 38);
+}
+
+.wirelessRouterHandle {
+    height: 15px;
+    width: 15px;
+    top: 5%;
+    left: 49%;
+    background-color: rgb(38, 38, 38);
+}
+
+.deviceIcon {
+    cursor: pointer;
+}
+
+.pcIconDark {
+    cursor: pointer;
+    stroke: white;
+}
+
+.pcIconLight {
+    cursor: pointer;
+    stroke: black;
+}
+
+.deviceIcon:active {
+    cursor: grabbing;
+}
