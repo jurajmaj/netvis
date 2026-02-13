@@ -1,9 +1,20 @@
-<!-- ![](docs/images/NetvisExample.png) -->
+![](docs/images/NetvisExample.png)
 
-# Netvis — Network Topology Visualisation Tool
+# <img src="docs/images/favicon.png" alt="Netvis" width="28" /> Netvis - Network Topology Visualisation Tool
 
-Netvis is a React Flow–based editor for designing and analysing network topologies in the browser.
-It provides a drag-and-drop canvas for building graphs (nodes + links), a per-link configuration menu, and a controller panel for sending the topology to an external algorithm service. Live demo can be found [here](https://netvis2.netlify.app/).
+Netvis is a browser-based network topology editor and algorithm visualizer.
+Build a graph with drag-and-drop devices, configure wired/Wi‑Fi links (interfaces, IPs, bandwidth), then send the topology to an external algorithm service to compute paths and view results as highlighted paths on the canvas and stats in the controller.
+
+Live demo: https://netvis2.netlify.app/
+
+## Backend (algorithm service)
+
+Netvis calls an external algorithm service to compute best paths based on the current topology. 
+
+- Backend project: <https://github.com/ivanbrtka/netvis_backend>
+- You’re also free to build and run your own backend service, as long as it implements the same HTTP endpoints and request/response contract.
+
+Setup details (API base URL, payload format): see [DEVELOPMENT.md](DEVELOPMENT.md).
 
 ## Features
 

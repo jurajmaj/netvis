@@ -1,8 +1,8 @@
 # Development
 
-This page is for contributors/maintainers working on Netvis locally. It covers local setup, how the app talks to the external algorithm service, and the request/response formats used by the UI.
+This page is for contributors and maintainers working on the Netvis frontend locally. It covers local setup, how the UI calls the external algorithm service, and the request/response formats used between the UI and the backend.
 
-For a user-facing overview of the app, see [README.md](README.md).
+For a user-facing overview of features and usage, see [README.md](README.md).
 
 ## Setup
 
@@ -20,11 +20,23 @@ Useful scripts (from [package.json](package.json)):
 - `npm test`
 - `npm run cypress:open`
 
+## Algorithm service (backend)
+
+Netvis can use any backend that implements the HTTP API described in this document (endpoints + payload/response format below).
+
+- Reference implementation (separate project): <https://github.com/ivanbrtka/netvis_backend>
+
+Once you have a backend running locally, set the Control Bar “Base URL” to `http://localhost:8000` (or whatever host/port your service uses) to connect the UI.
+
+### CORS note
+The UI runs on `http://localhost:3000` in development and sends cross-origin POST requests to the configured backend Base URL.
+If you use the reference backend, localhost is already allowed. If you run a different backend or a different host/port, make sure it enables CORS for the UI origin, otherwise the browser will block requests even if the endpoint is reachable.
+
 ## API base URL
 
 Netvis posts the topology to an external algorithm service which is editable in the UI via the Control Bar “Base URL” field.
 
-Endpoints are added to the base URL depending on the selected algorithm, for example if the base URL is `http://localhost:5000` and the user selects Dijkstra, the full POST URL becomes `http://localhost:5000/dijkstra/` (see [src/_api/postFlow.js](src/_api/postFlow.js)):
+Endpoints are added to the base URL depending on the selected algorithm, for example if the base URL is `http://localhost:8000` and the user selects Dijkstra, the full POST URL becomes `http://localhost:8000/dijkstra/` (see [src/_api/postFlow.js](src/_api/postFlow.js)):
 
 | Algorithm (UI) | POST endpoint |
 |---|---|
