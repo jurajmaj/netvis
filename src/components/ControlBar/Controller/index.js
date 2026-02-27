@@ -126,6 +126,7 @@ const Controller = (props) => {
     setStats(null);
     setErrorMessage(null);
     setPaths([]);
+    setControllerData(controllerId, { paths: [] });
 
     setYenPath(1);
     setYenCheckbox(false);
@@ -134,21 +135,31 @@ const Controller = (props) => {
   }, [source, destination, algorithm, numPaths, bandwidth, delay, jitter]);
 
   useEffect(() => {
-    setControllerData(controllerId, { source: source });
-    setControllerData(controllerId, { destination: destination });
-    setControllerData(controllerId, { bandwidth: bandwidth });
+    setControllerData(controllerId, { source });
+    setControllerData(controllerId, { destination });
+    setControllerData(controllerId, { bandwidth });
 
-    if(paths && paths.length > 0) {
-      setControllerData(controllerId, {paths: paths[0].result});
-      if (algorithm === 'Yen' && yenCheckbox) {
-        let yenIds = [...new Set(paths[0].result.flat())];
-        setControllerData(controllerId, {paths: yenIds});
+    const result = paths?.[0]?.result;
+    if (!result) return;
+
+    let edgeIds = [];
+
+    if (algorithm === 'Yen') {
+      if (Array.isArray(result) && Array.isArray(result[0])) {
+        if (yenCheckbox) {
+          edgeIds = [...new Set(result.flat())];
+        } else {
+          const idx = Math.max(0, Number(yenPath) - 1);
+          edgeIds = result[idx] ?? [];
+        }
+      } else if (Array.isArray(result)) {
+        edgeIds = result;
       }
-      else if (algorithm === 'Yen' && !yenCheckbox) {
-        let yenIds = paths[0].result[yenPath - 1];
-        setControllerData(controllerId, {paths: yenIds});
-      }
+    } else {
+      edgeIds = Array.isArray(result) ? result : [];
     }
+
+    setControllerData(controllerId, { paths: edgeIds });
   }, [source, destination, setControllerData, controllerId, bandwidth, paths, algorithm, yenCheckbox, yenPath]);
 
   return (
