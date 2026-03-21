@@ -6,7 +6,7 @@ import { FAOptions } from "./interfaces";
 import {EDGE_ATTRIBUTES} from "../../constants";
 import useThemeStore from "../../stores/useThemeStore";
 
-export default function Edge({ data, id, style, source, target, sourceX, sourceY, targetX, targetY }) {
+export default function Edge({ data, id, style, source, target, sourceX, sourceY, targetX, targetY, animated }) {
   const offset = data.isDuplicateEdge ? (22 * data.duplicateEdgesCount) : 0;
   const sourceYWithOffset = sourceY !== undefined ? sourceY + offset : 0;
   const targetYWithOffset = targetY !== undefined ? targetY + offset : 0;
@@ -97,7 +97,7 @@ export default function Edge({ data, id, style, source, target, sourceX, sourceY
 
   const renderedStyle = {
     ...(style ?? {}),
-    ...(isWirelessRouterPc ? { strokeDasharray: "2 6", strokeLinecap: "round" } : {}),
+    ...(isWirelessRouterPc && !animated ? { strokeDasharray: "2 6", strokeLinecap: "round" } : {}),
   };
 
   useEffect(() => {
