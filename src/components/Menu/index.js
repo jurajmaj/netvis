@@ -1,7 +1,12 @@
 import React, { useEffect, useCallback } from "react";
 import { Panel } from "reactflow";
 import { Menu, MenuItem, ListItemIcon, ThemeProvider, Typography, ListItemText } from "@mui/material";
-import { Download as DownloadIcon, Upload as UploadIcon, DarkMode as DarkModeIcon } from "@mui/icons-material";
+import {
+  Download as DownloadIcon,
+  Upload as UploadIcon,
+  DarkMode as DarkModeIcon,
+  MenuBook as MenuBookIcon,
+} from "@mui/icons-material";
 import PopupState, { bindTrigger, bindMenu } from "material-ui-popup-state";
 
 import { ReactComponent as HamburgerIcon } from "../../assets/HamburgerMenu.svg";
@@ -13,12 +18,25 @@ import uploadFlow from "./uploadFlow";
 import useThemeStore from "../../stores/useThemeStore";
 import useIdsStore from "../../stores/useIdsStore";
 
+const DOCS_URL = "https://github.com/jurajmaj/netvis/blob/main/DEVELOPMENT.md";
+
+function openDocumentation() {
+  window.open(DOCS_URL, "_blank", "noopener,noreferrer");
+}
 
 const HamburgerMenu = (props) => {
   const toggleTheme = useThemeStore((state) => state.toggleTheme);
   const { setNodeId, setEdgeId } = useIdsStore();
 
   const menuItems = [
+    {
+      Icon: MenuBookIcon,
+      text: "Open documentation",
+      onClick: (popupState) => {
+        openDocumentation();
+        popupState.close();
+      },
+    },
     { Icon: DarkModeIcon,
       text: "Change theme",
       typography: navigator.userAgent.includes('Mac') ? "⌘K" : <><span
